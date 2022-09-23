@@ -1,0 +1,170 @@
+
+   ErrorException 
+
+  file_get_contents(C:/Users/Trevor Simon/file.sql): Failed to open stream: No such file or directory
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:31
+     27▕      * @return int
+     28▕      */
+     29▕     public function handle()
+     30▕     {
+  ➜  31▕         DB::unprepared(file_get_contents('C:/Users/Trevor Simon/file.sql'));
+     32▕         //unlink('C:/Users/HP X2/file.sql');
+     33▕     }
+     34▕ }
+     35▕
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:31
+      file_get_contents("C:/Users/Trevor Simon/file.sql")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  file_get_contents(C:/Users/Trevor Simon/file.sql): Failed to open stream: No such file or directory
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:31
+     27▕      * @return int
+     28▕      */
+     29▕     public function handle()
+     30▕     {
+  ➜  31▕         DB::unprepared(file_get_contents('C:/Users/Trevor Simon/file.sql'));
+     32▕         unlink('C:/Users/Trevor Simon/file.sql');
+     33▕     }
+     34▕ }
+     35▕
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:31
+      file_get_contents("C:/Users/Trevor Simon/file.sql")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined variable $participant
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:38
+     34▕     
+     35▕             if(file_exists("participants.txt")){
+     36▕                 $participant=file_get_contents("participants.txt");
+     37▕             }
+  ➜  38▕             $participant_array=explode(";",$participant);
+     39▕     
+     40▕         
+     41▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES('{$participant_array[0]}','{$participant_array[1]}','{$participant_array[2]}','{$participant_array[3]}')";
+     42▕           unlink("participants.txt");
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:38
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined variable $participant", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined array key 1
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:41
+     37▕             }
+     38▕             $participant_array=explode(" ",$participant);
+     39▕     
+     40▕         
+  ➜  41▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES('{$participant_array[0]}','{$participant_array[1]}','{$participant_array[2]}','{$participant_array[3]}')";
+     42▕           unlink("participants.txt");
+     43▕          if($conn->query($sql)===TRUE) {
+     44▕         echo "New record created successfully";
+     45▕     } else {
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:41
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined array key 1", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined array key 1
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:41
+     37▕             }
+     38▕             $participant_array=explode(" ",$participant);
+     39▕     
+     40▕         
+  ➜  41▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES('{$participant_array[0]}','{$participant_array[1]}','{$participant_array[2]}','{$participant_array[3]}')";
+     42▕           unlink("participants.txt");
+     43▕          if($conn->query($sql)===TRUE) {
+     44▕         echo "New record created successfully";
+     45▕     } else {
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:41
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined array key 1", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined variable $name
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:45
+     41▕                 $password=$_POST['password'];
+     42▕                 $product=$_POST['product'];
+     43▕             }
+     44▕ 
+  ➜  45▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES($name,$DOB,$password,$product)";
+     46▕           unlink("participants.txt");
+     47▕          if($conn->query($sql)===TRUE) {
+     48▕         echo "New record created successfully";
+     49▕     } else {
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:45
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined variable $name", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined variable $name
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:45
+     41▕                 $password=$_POST['password'];
+     42▕                 $product=$_POST['product'];
+     43▕             }
+     44▕ 
+  ➜  45▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES('$name','$DOB','$password','$product')";
+     46▕           unlink("participants.txt");
+     47▕          if($conn->query($sql)===TRUE) {
+     48▕         echo "New record created successfully";
+     49▕     } else {
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:45
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined variable $name", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+
+   ErrorException 
+
+  Undefined array key 1
+
+  at D:\dammy\anka2\app\Console\Commands\insertData.php:40
+     36▕                 $participant=file_get_contents("products.txt");
+     37▕             }
+     38▕             $participant_array=explode(",",$participant);
+     39▕ 
+  ➜  40▕           $sql="INSERT INTO participants ('name','DOB','password','product') VALUES('{$participant_array[0]}','{$participant_array[1]}','{$participant_array[2]}','{$participant_array[3]}')";
+     41▕           unlink("products.txt");
+     42▕          if($conn->query($sql)===TRUE) {
+     43▕         echo "New record created successfully";
+     44▕     } else {
+
+  1   D:\dammy\anka2\app\Console\Commands\insertData.php:40
+      Illuminate\Foundation\Bootstrap\HandleExceptions::Illuminate\Foundation\Bootstrap\{closure}("Undefined array key 1", "D:\dammy\anka2\app\Console\Commands\insertData.php")
+
+  2   D:\dammy\anka2\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\insertData::handle()
+0,trev,12345,chair,123456
+1,tr,12345,chair,123456
